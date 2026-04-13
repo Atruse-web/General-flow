@@ -1,0 +1,39 @@
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+.editor.config
+
+# Local Environment
+.env
+.env.local
+*.local
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Obsidian temp files
+.obsidian/plugins/
+.obsidian/themes/
+.obsidian/plugins/
+
+# Build artifacts
+dist/
+build/
+node_modules/
+
+# Keep planning documents
+!projects/
+!ideas/
+!research/
+!templates/
+!scripts/

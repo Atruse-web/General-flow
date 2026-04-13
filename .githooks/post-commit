@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Post-Commit Hook
+# Automatically syncs files to Obsidian vault after each commit
+# Only runs if OBSIDIAN_VAULT_PATH is set
+
+# Get the repo root
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+SCRIPTS_PATH="$REPO_ROOT/scripts"
+
+# Check if Obsidian vault path is configured
+if [ -n "$OBSIDIAN_VAULT_PATH" ] && [ -d "$OBSIDIAN_VAULT_PATH" ]; then
+    # Run the sync script silently
+    if [ -x "$SCRIPTS_PATH/sync-obsidian.sh" ]; then
+        "$SCRIPTS_PATH/sync-obsidian.sh" -v "$OBSIDIAN_VAULT_PATH" > /dev/null 2>&1
+        if [ $? -eq 0 ]; then
+            echo "✅ Synced to Obsidian vault"
+        fi
+    fi
+fi
+
+exit 0
