@@ -5,16 +5,16 @@ This file configures Claude Code behavior for optimal planning workflows.
 ## Environment Configuration
 
 ```
-OBSIDIAN_VAULT_PATH=/path/to/your/obsidian/vault
+OBSIDIAN_VAULT_PATH=/desktop/vault
 PLANNING_REPO_PATH=/home/user/General-flow
 ```
 
-**TODO: Update `OBSIDIAN_VAULT_PATH` with your actual vault location**
+**Configured:** ✅ Your vault path is set to `/desktop/vault`
 
-Example paths:
-- macOS: `~/Documents/MyVault` or `~/Vault/my-obsidian-vault`
-- Linux: `~/Documents/ObsidianVault` or `~/vaults/main`
-- Windows: `C:\Users\YourName\Documents\ObsidianVault`
+To make this persistent, add to your shell profile (`.bashrc`, `.zshrc`, etc.):
+```bash
+export OBSIDIAN_VAULT_PATH=/desktop/vault
+```
 
 ## Automated Hooks
 
